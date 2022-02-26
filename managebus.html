@@ -1,0 +1,108 @@
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+box-sizing: border-box;
+}
+body {margin: 0;}
+.header {
+padding: px;
+text-align: center;
+background: orange;
+color: white;
+}
+.navbar {
+overflow: hidden;
+background-color: dimgrey;
+}
+.navbar a {
+float: left;
+display: block;
+color: white;
+text-align: center;
+padding: 10px 10px;
+}
+.navbar a.right {
+float: right;
+}
+.navbar a:hover{
+background-color: #eee;
+color: black;
+}
+.row {
+display: flex;
+flex-wrap: wrap;
+}
+.sidebar {
+flex: 10%;
+background-color: #f1f1f1;
+padding: 20px;
+}
+.main {
+flex: 80%;
+background-color: pink;
+padding: 20px;
+}
+.logoimg {
+height:10%;
+float:left;
+}
+</style>
+</head>
+<title>Manage Bus details</title>
+<body>
+<div class="header">
+<h1>Manage Bus Details</h1>
+</div>
+<div class="navbar">
+
+
+<a href="home.html" class="right">Logout</a>
+</div>
+<div class="row">
+<div class="sidebar">
+    <a href="viewusers.php"class="right">View User Details</a><br><br>
+
+<div class="main">
+
+    <div class="main">
+    <h2>Manage Bus Details</h2><br><br>
+<form name='buspass' method="POST" action="managebus.php">
+<ul>
+<label for="Busnumber:">Bus Number:</label>
+<input type="text" name="Bus_no" size="12" /><br></br>
+<label for="Availablebus:">Available Seats:</label>
+<input type="text" name="Seats_available" size="12" /><br></br>
+<label for="noofstops:">No of stops:</label>
+<input type="text" name="No_of_stops" size="12" /><br></br>
+<label for="startingstop:">From:</label>
+<select name="Starting_stop">
+<option selected="" >Please select!</option>
+<option value="Ellis Nagar">Ellis Nagar</option>
+<option value="Ponmeni">Ponmeni</option>
+<option value="Arappalayam">Arappalayam</option>
+<option value="Doak Nagar">Doak Nagar</option>
+<option value="AD">Tvs Nagar</option>
+</select><br></br>
+<label for="Destination:">To:</label>
+<select name="Destination">
+<option selected="" value="Default">Please select !</option>
+<option value="Gorippalayam">Gorippalayam</option>
+<option value="Vasanth Nagar">Vasanth Nagar</option>
+<option value="Viraganoor">Viraganoor</option>
+<option value="Theppakulam">Theppakulam</option>
+<option value="Arasaradi">Arasaradi</option>
+</select><br></br>
+<input type="submit" name="submit" value="submit" />
+
+<br>
+<br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+</body>
+
+

@@ -1,0 +1,139 @@
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+box-sizing: border-box;
+}
+body {margin: 0;}
+.header {
+padding: 10px;
+text-align: center;
+background: orange;
+color: white;
+}
+.navbar {
+overflow: hidden;
+background-color: dimgrey;
+}
+.navbar a {
+float: left;
+display: block;
+color: white;
+text-align: center;
+padding: 10px 10px;
+}
+.navbar a.right {
+float: right;
+}
+.navbar a:hover{
+background-color: #eee;
+color: black;
+}
+.row {
+display: flex;
+flex-wrap: wrap;
+}
+.sidebar {
+flex: 10%;
+background-color: #f1f1f1;
+padding: 20px;
+}
+.main {
+flex: 80%;
+background-color: pink;
+padding: 20px;
+}
+.logoimg {
+height:10%;
+float:left;
+}
+
+</style>
+
+</head>
+<title>User</title>
+<body>
+
+<div class="header">
+
+<h1>Welcome User!</h1>
+<div class="navbar">
+<span class="loginlogoutlink">
+   <a title="Log Out" href="logout.php" class="right">Log Out</a>
+</span>
+</div>
+<div>
+<div class="row">
+<div class="sidebar">
+    
+
+
+</div>
+<div class="main">
+    <h2>Generate Bus pass</h2><br><br>
+<form name='buspass' method="POST" action="pdf.php">
+<ul>
+<label for="Username:">User Name:</label>
+<input type="text" name="username" size="12" /><br></br>
+<label for="Bus Number:">Bus Number:</label>
+<select name="busnumber">
+<option selected="" value="Default">Please select !</option>
+<option value="7A">7A</option>
+<option value="7B">7B</option>
+<option value="12C">12C</option>
+<option value="13B">13B</option>
+<option value="7G">7G</option>
+</select><br></br>
+<label for="Starting stop:">From:</label>
+<select name="startingstop">
+<option selected="" >Please select!</option>
+<option value="Ellis Nagar">Ellis Nagar</option>
+<option value="Ponmeni">Ponmeni</option>
+<option value="Arappalayam">Arappalayam</option>
+<option value="Doak Nagar">Doak Nagar</option>
+<option value="AD">Tvs Nagar</option>
+</select><br></br>
+<label for="Destination:">To:</label>
+<select name="destination">
+<option selected="" value="Default">Please select !</option>
+<option value="Gorippalayam">Gorippalayam</option>
+<option value="Vasanth Nagar">Vasanth Nagar</option>
+<option value="Viraganoor">Viraganoor</option>
+<option value="Theppakulam">Theppakulam</option>
+<option value="Arasaradi">Arasaradi</option>
+</select><br></br>
+
+<label for="Pass Duration:">Pass duration:</label>
+<select name="duration">
+<option selected="" value="Default">Please select !</option>
+<option value="1 month">1 month</option>
+<option value="3 months">3 months</option>
+<option value="6 months">6 months</option>
+<option value="8 months">8 months</option>
+<option value="1 year">1 year</option>
+</select><br></br>
+
+<label for="email">Email:</label>
+<input type="text" name="email" size="30" /><br></br>
+<label for="gender">Gender:</label>
+<input type="radio" name="male" value="Male" /><span>Male</span>
+<input type="radio" name="female" value="Female" /><span>Female</span><br></br>
+<input type="submit" name="generate" value="Generate pass" /></ul></form>
+
+
+</ul>
+</form>
+<br><br>
+
+
+<br>
+<br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+</body>
+
